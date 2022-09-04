@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container container__header">
+        <a class="logo logo__header" href="./index.html"
+          ><span class="logo__web" lang="en">Web</span>Studio</a
+        >
+        <nav class="nav">
+          <ul class="list nav__items">
+            <li>
+              <a class="nav__link" href="./index.html">Студія</a>
+            </li>
+            <li>
+              <a class="nav__link nav__link--current" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li><a class="nav__link" href="">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="contacts list">
+          <li>
+            <a class="contacts__link" href="mailto:info@devstudio.com">
+              <svg class="contacts__mail-item">
+                <use href="./image/icons.svg#letter"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a class="contacts__link" href="tel:+380961111111">
+              <svg class="contacts__tel-item">
+                <use href="./image/icons.svg#phone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="portfolio">
+        <div class="container">
+          <h1 class="portfolio__title" hidden>Послуги</h1>
+          <ul class="filter">
+            <li>
+              <button
+                class="filter__button filter__button--current"
+                type="button"
+              >
+                Все
+              </button>
+            </li>
+            <li>
+              <button class="filter__button" type="button">Веб-сайти</button>
+            </li>
+            <li>
+              <button class="filter__button" type="button">Додатки</button>
+            </li>
+            <li>
+              <button class="filter__button" type="button">Дизайн</button>
+            </li>
+            <li>
+              <button class="filter__button" type="button">Маркетинг</button>
+            </li>
+          </ul>
+          <ul class="portfolio-services">
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/laptop.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">Технокряк</h2>
+                  <p class="service-card__subtitle">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/sportsmen.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">
+                    Постер New Orlean vs Golden Star
+                  </h2>
+                  <p class="service-card__subtitle">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/seafood.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">Ресторан Seafood</h2>
+                  <p class="service-card__subtitle">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/headphones.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">Проєкт Prime</h2>
+                  <p class="service-card__subtitle">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/boxes.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">Проєкт Boxes</h2>
+                  <p class="service-card__subtitle">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/monitor.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">
+                    Inspiration has no Borders
+                  </h2>
+                  <p class="service-card__subtitle">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/magazine.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">Видання Limited Edition</h2>
+                  <p class="service-card__subtitle">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/label.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">Проєкт LAB</h2>
+                  <p class="service-card__subtitle">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="service-card">
+              <a class="service-card__link" href="#">
+                <div class="service-card__container">
+                  <img
+                    src="./image/hands_laptop.jpg"
+                    alt="Відкритий сайт на ноутбуці"
+                    width="370"
+                  />
+                  <div class="service-card__description-container">
+                    <p class="service-card__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="service-card__meta">
+                  <h2 class="service-card__title">Growing Business</h2>
+                  <p class="service-card__subtitle">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container container__footer">
+        <div>
+          <a class="logo logo__footer" href="./index.html"
+            ><span class="logo__web" lang="en">Web</span>Studio</a
+          >
+          <address class="address">
+            <ul class="address-items list">
+              <li class="address-items__location">
+                м. Київ, пр-т Лесі Українки, 26
+              </li>
+              <li class="address-items__mail">
+                <a
+                  class="address-items__mail-link link"
+                  href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="address-items__tel">
+                <a class="address-items__tel-link link" href="tel:+12127724150"
+                  >+1 212-772-4150</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="find-us">
+          <b class="find-us__title">Приєднуйтесь</b>
+          <ul class="social-items social-items__find-us">
+            <li class="social-link__find-us">
+              <a class="social-link__container__find-us" href="#">
+                <svg class="social-link_icon__find-us">
+                  <use href="./image/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link__find-us">
+              <a class="social-link__container__find-us" href="#">
+                <svg class="social-link_icon__find-us">
+                  <use href="./image/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link__find-us">
+              <a class="social-link__container__find-us" href="#">
+                <svg class="social-link_icon__find-us">
+                  <use href="./image/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link__find-us">
+              <a class="social-link__container__find-us" href="#">
+                <svg class="social-link_icon__find-us">
+                  <use href="./image/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="follow-us">
+          <b class="follow-us_title">Підпишіться на розсилку</b>
+          <form class="form form__follow-us">
+            <input
+              class="form__input__follow-us"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+            <button type="submit" class="follow-button">
+              Підписатися
+              <svg class="follow-button-icon">
+                <use href="./image/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

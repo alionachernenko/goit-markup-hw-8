@@ -1,0 +1,16 @@
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.portfolio-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio-services__card {
+    text-decoration: none;
+    display: block;
+    transition: box-shadow $animation-duration $animation-timing-function;
+}

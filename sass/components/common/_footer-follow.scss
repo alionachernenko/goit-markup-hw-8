@@ -1,0 +1,66 @@
+.follow-us_title {
+    color: $find-us-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+// .form__follow-us {
+//     // display: flex;
+//     // flex-direction: row;
+//     // font-family: 'Roboto', sans-serif;
+//     // align-items: baseline;
+// }
+
+.form__input__follow-us {
+    width: 100%;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #2F303A;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #FFFFFF;
+    margin-right: 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    &::placeholder {
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.follow-button {
+    width: 200px;
+    height: 50px;
+    background-color: $accent-color;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.follow-button-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}

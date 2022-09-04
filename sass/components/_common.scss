@@ -1,0 +1,37 @@
+body {
+    background-color: var(--main-background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-color);
+
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: color var(--animation-duration) var(--animation-timing-function);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
