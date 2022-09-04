@@ -1,7 +1,13 @@
 .customers {
     padding-top: 60px;
     padding-bottom: 60px;
+
+
     width: 480px;
+
+    @media screen and (min-width: 768px) {
+            width: 768px;
+    }
     margin-left: auto;
     margin-right: auto;
     
@@ -27,6 +33,11 @@
 
 .customer {
     width: calc((100% - 1 * 30px) / 2);
+
+    @media screen and (min-width:768px) {
+        width: calc((100% - 2 * 30px) / 3);
+        
+    }
 }
 
 .customer__container {

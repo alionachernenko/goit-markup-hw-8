@@ -7,8 +7,12 @@
     font-size: 26px;
     color: $header-logo-color;
     text-decoration: none;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @media screen and (min-width: 768px){
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
 }
 
 .container__header {
