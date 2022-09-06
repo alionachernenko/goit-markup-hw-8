@@ -2,20 +2,12 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-
-    @media screen and (min-width: 768px) {
-        padding-left: 204px;
-        padding-right: 204px;
-    }
-
-    @media screen and (min-width: 1600px) {
-        padding-left: 452px;
-        padding-right: 452px;
-    }
-    
 }
 
 .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image:
@@ -24,7 +16,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 480px;
+    min-width: 480px;
 
     @media screen and (min-width: 768px) {
         width: 768px;
@@ -60,10 +52,15 @@
     text-transform: uppercase;
     color: #FFFFFF;
 
+    @media screen and (min-width: 480px) {
+        max-width: 360px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 44px;
         line-height: 1.45;
         letter-spacing: 0.06em;
+        max-width: 696px;
     }
         
     }

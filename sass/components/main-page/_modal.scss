@@ -8,22 +8,50 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity $animation-duration linear;
+    padding-top: 93px;
+    padding-bottom: 93px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    overflow-y: scroll;
+
 }
 
 .modal {
+    position: relative;
     width: 450px;
     min-height: 609px;
     background-color: $main-background-color;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
     opacity: 1;
-    transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
     transition: transform $animation-duration ease, opacity $animation-duration ease;
     border-radius: 4px;
     padding: 40px;
 }
 
+@media screen and (min-width: 481px) {
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform $animation-duration ease, opacity $animation-duration ease;
+        border-radius: 4px;
+
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .modal {
+        width: 528px;
+        min-height: 581px;
+
+    }
+    }
+    
 
 
 
@@ -78,7 +106,13 @@
 
 .backdrop.is-hidden .modal {
     opacity: 0;
-    transform: translate(-50%, 100%)
+    transform: translate(0%, 100%);
+}
+
+@media screen and (min-width: 480px) {
+    .backdrop.is-hidden .modal {
+        transform: translate(-50%, 100%);
+    }
 }
 
 .close-button__icon {
@@ -232,7 +266,17 @@ form {
     line-height: 1.16;
     letter-spacing: 0.03em;
     color: #757575;
+
+    
 }
+
+@media screen and (min-width: 1600px) {
+    .checkbox-container__label {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}
+
 
 .submit-button {
     min-width: 200px;

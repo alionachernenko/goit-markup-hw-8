@@ -2,13 +2,14 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    border-bottom: 1px solid $border-color;
 
     @media screen and (min-width: 768px) {
         width: 768px;
     }
 
     @media screen and (min-width: 1600px) {
-        width: 1600px;
+        min-width: 1600px;
     }
 }
 
@@ -38,10 +39,6 @@
     margin-right: auto;
 }
 
-
-// .header {
-//     border-bottom: 1px solid $border-color;
-// }
 
 
 .nav__link.nav__link--current {

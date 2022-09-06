@@ -1,6 +1,32 @@
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+@media screen and (min-width: 480px) {
+    .portfolio {
+        width: 480px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio {
+        width: 768px;
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+    .portfolio {
+        width: 1600px;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
 }
 
 .portfolio-services {
@@ -13,4 +39,5 @@
     text-decoration: none;
     display: block;
     transition: box-shadow $animation-duration $animation-timing-function;
+
 }
