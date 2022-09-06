@@ -1,15 +1,19 @@
 .customers {
     padding-top: 60px;
     padding-bottom: 60px;
-
+    margin-left: auto;
+    margin-right: auto;
 
     width: 480px;
 
     @media screen and (min-width: 768px) {
             width: 768px;
     }
-    margin-left: auto;
-    margin-right: auto;
+    
+    @media screen and (min-width: 1600px) {
+            width: 1600px;
+    }
+
     
 }
 
@@ -37,6 +41,10 @@
     @media screen and (min-width:768px) {
         width: calc((100% - 2 * 30px) / 3);
         
+    }
+
+    @media screen and (min-width:1600px) {
+        width: calc((100% - 5 * 30px) / 6);
     }
 }
 

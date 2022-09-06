@@ -10,7 +10,11 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-align: center;
+
+    @media screen and (max-width: 1599px) {
+        text-align: center;
+    }
+    
 }
 
 .social-link_icon__find-us {

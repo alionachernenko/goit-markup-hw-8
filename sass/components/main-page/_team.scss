@@ -4,12 +4,17 @@
     padding-bottom: 60px;
     background-color: $team-color;
     width: 480px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media screen and (min-width: 768px) {
         width: 768px;
     }
-    margin-left: auto;
-    margin-right: auto;
+
+    @media screen and (min-width: 1600px) {
+        width: 1600px;
+    }
+    
 }
 
 .team-items {
@@ -18,14 +23,27 @@
             gap: 30px;
             flex-wrap: wrap;
         }
+
+    @media screen and (min-width: 1600px) {
+        display: flex;
+        gap: 30px;
+
+    }
+
     
 }
 
 .team__title {
     text-align: center;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.17;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 36px;
+        line-height: 1.16;
+    }
+
     letter-spacing: 0.03em;
     color: $main-color;
     margin-bottom: 30px;
@@ -35,6 +53,9 @@
     width: 100%;
     @media screen and (min-width: 768px) {
         width: calc((100% - 1 * 30px) / 2);
+    }
+    @media screen and (min-width: 1600px) {
+        width: calc((100% - 3 * 30px) / 4);
     }
     background-color: $team-card-background;
     border-radius: 0px 0px 4px 4px;
@@ -50,11 +71,9 @@
 }
 
 .professional-photo{
-    width: 450px;
-    @media screen and (min-width: 768px) {
-            width: 354px;
-    }
+    width: 100%;
 }
+
 .professional__description-block {
     padding-top: 30px;
     padding-bottom: 30px;

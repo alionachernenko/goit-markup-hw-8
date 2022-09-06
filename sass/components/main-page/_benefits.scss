@@ -2,8 +2,13 @@
     padding: 94px 0;
     margin-left: auto;
     margin-right: auto;
+
     @media screen and (min-width: 768px) {
         width: 768px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 1600px;
     }
 }
 
@@ -22,13 +27,25 @@
         gap: 30px;
         flex-wrap: wrap;
     }
+
+    @media screen and (min-width: 1600px) {
+        display: flex;
+        gap: 30px;
+        flex-wrap: nowrap;
+    }
+
 }
 
 .benefit {
+    margin-bottom: 30px;
+
     @media screen and (min-width: 768px) {
         width: calc((100% - 1 * 30px) / 2);
     }
-    margin-bottom: 30px;
+
+    @media screen and (min-width: 1600px) {
+        width: calc((100% - 3 * 30px) / 4);
+    }
 }
 
 .benefit__item {
@@ -53,7 +70,7 @@
 .benefit__title {
     margin-bottom: 10px;
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
             text-align: center;
         }
     font-weight: 700;
@@ -65,6 +82,7 @@
 }
 
 .benefit__paragraph {
+    font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $paragraph-color;
