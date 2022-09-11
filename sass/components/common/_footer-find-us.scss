@@ -1,5 +1,9 @@
 .find-us {
-    margin-bottom: 60px;
+
+    @media screen and (max-width: 1199px) {
+            margin-bottom: 60px;
+        }
+    
 }
 
 
@@ -13,7 +17,7 @@
     text-align: center;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
     .find-us__title {
         text-align: left;
     }

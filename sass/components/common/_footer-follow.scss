@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         .follow-us_title {
             text-align: left;
         }
@@ -17,7 +17,7 @@
 
 .form__follow-us {
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         display: flex;
         flex-direction: row;
         font-family: 'Roboto', sans-serif;
@@ -35,7 +35,7 @@
         margin-right: auto;
     }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
             width: 358px;
             margin-left: auto;
             margin-right: 12px;

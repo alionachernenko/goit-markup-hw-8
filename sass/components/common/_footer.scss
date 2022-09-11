@@ -5,19 +5,13 @@
     width: 480px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: 480px) {
+                width: 100%;
+        }
 }
 
-@media screen and (min-width: 768px) {
-    .footer {
-        width: 768px;
-    }
-}
 
-@media screen and (min-width: 1600px) {
-    .footer {
-        width: 1600px;
-    }
-}
 
 
     
@@ -30,7 +24,7 @@
     }  
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
     .container__footer {
         display: flex;
         align-items: baseline;
@@ -48,7 +42,7 @@
     text-align: center;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
     .logo__footer {
         text-align: left;
     }

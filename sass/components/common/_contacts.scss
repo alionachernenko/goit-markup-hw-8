@@ -1,7 +1,7 @@
 .contacts {
     margin-left: 96px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
             display: flex;
             align-items: center;
             margin-left: auto;
@@ -10,48 +10,61 @@
     @media screen and (max-width: 767px) {
         display: none;
     }
+}
 
+.contacts_item {
+    @media screen and (max-width: 1599px){
+        margin: 0;
+        
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contacts :not(:last-child) {
+        margin-right: 50px;
+    }
     
 }
 
 .contacts :not(:last-child) {
     margin-bottom: 10px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         margin-bottom: 0;
+    }
+}
+
+.contacts__link {
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .contacts__link {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.02em;
+        color: $paragraph-color;
+        text-decoration: none;
+        transition: color $animation-duration $animation-timing-function;
     }
     
 }
 
-.contacts__link {
-    display: flex;
-    align-items: center;
-
-    font-weight: 500;
-    
-
-    @media screen and (min-width: 768px){
-        font-size: 12px;
-        line-height: 1.16;
-    }
-
-    @media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
+    .contacts__link {
         padding-top: 32px;
         padding-bottom: 32px;
         font-size: 14px;
         line-height: 1.14;
     }
-
-    letter-spacing: 0.02em;
-    color: $paragraph-color;
-    text-decoration: none;
-    transition: color $animation-duration $animation-timing-function;
-        
-
-    &:hover,
-    &:focus {
-    color: $accent-color;
-}
 }
 
 .contacts__mail-item {
@@ -68,11 +81,21 @@
 }
 
 .contacts__tel-item {
-    width: 10px;
-    height: 16px;
+    
+    @media screen and (min-width: 768px) {
+        width: 10px;
+        height: 14px;
+    }
+    
+   
     fill: #757575;
     margin-right: 10px;
     transition: fill $animation-duration $animation-timing-function;
+
+    @media screen and (min-width: 1200px) {
+        width: 10px;
+        height: 16px;
+    }
 
     .contacts__link:hover &,
     .contacts__link:focus & {
@@ -80,6 +103,4 @@
 }
 }
 
-.contacts :not(:last-child) {
-    margin-right: 50px;
-}
+

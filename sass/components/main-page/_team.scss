@@ -7,13 +7,11 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media screen and (min-width: 768px) {
-        width: 768px;
+    @media screen and (min-width: 480px) {
+        width: 100%;
     }
 
-    @media screen and (min-width: 1600px) {
-        width: 1600px;
-    }
+    
     
 }
 
@@ -24,10 +22,9 @@
             flex-wrap: wrap;
         }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         display: flex;
         gap: 30px;
-
     }
 
     
@@ -39,7 +36,7 @@
     font-size: 28px;
     line-height: 1.17;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         font-size: 36px;
         line-height: 1.16;
     }
@@ -54,7 +51,7 @@
     @media screen and (min-width: 768px) {
         width: calc((100% - 1 * 30px) / 2);
     }
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         width: calc((100% - 3 * 30px) / 4);
     }
     background-color: $team-card-background;
