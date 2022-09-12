@@ -8,18 +8,23 @@
 
 .address {
     font-style: normal;
-    width: 100%;
     text-align: center;
 
-    @media screen and (max-width: 1199px) {
-        margin-bottom: 60px;
+     @media screen and (min-width: 1200px) {
+        text-align: left; 
+        // margin-right: 70px;
     }
-    
 }
 
- @media screen and (min-width: 1200px) {
-    .address{
-        text-align: left; 
+.address-logo-box
+ {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+        
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
     }
 }
 
@@ -38,7 +43,9 @@
     letter-spacing: 0.02em;
     color: $footer-contacts;
     transition: color $animation-duration $animation-timing-function;
-    .address-items__mail:hover &{
+
+    .address-items__mail:hover &,
+    &:focus{
             color: $accent-color;
     }
     
@@ -53,7 +60,8 @@
     color: $footer-contacts;
     transition: color $animation-duration $animation-timing-function;
 
-    .address-items__tel:hover & {
+    .address-items__tel:hover &,
+    &:focus {
         color: $accent-color;
     }
 }

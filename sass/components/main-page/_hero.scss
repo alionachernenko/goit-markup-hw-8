@@ -1,4 +1,4 @@
-.container__hero {
+.container--hero {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -10,30 +10,52 @@
     justify-content: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image:
-        linear-gradient(to right, $hero-gradient, $hero-gradient),
-        url(../image/heroimage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-width: 480px;
     max-width: 1600px;
-
-    
     margin: 0 auto;
+    height: 400px;
+    background-image:
+            linear-gradient(to right, $hero-gradient, $hero-gradient),
+            url(../image/heroimagemobile.jpg);
+
+    @media screen and (min-width: 768px) {
+        background-image:
+            linear-gradient(to right, $hero-gradient, $hero-gradient),
+            url(../image/heroimagetablet.jpg);
+        background-size: cover;
+    }
+    
+
+    @media screen and (min-width: 1200px) {
+        background-image:
+            linear-gradient(to right, $hero-gradient, $hero-gradient),
+            url(../image/heroimage.jpg);
+        background-size: cover;
+        height: 600px;
+    }
+    
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, $hero-gradient, $hero-gradient), 
+        url(../image/heroimage@2x.jpg);
+
+        @media screen and (min-width: 768px){
+        background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
+            url(../image/heroimage-tablet@2x.jpg);
+    }   
+        @media screen and (min-width: 1200px){
+        background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
+            url(../image/heroimage-desktop@2x.jpg);
+    }
+
 }
 
-// .hero {
-//     padding: 200px 0;
-//     background-image:
-//         linear-gradient(to right, $hero-gradient, $hero-gradient),
-//         url(../image/heroimage.jpg);
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-//     max-width: 1600px;
-//     margin: 0 auto;
-// }
+}
 
 .hero-title {
     margin-bottom: 30px;
@@ -57,58 +79,27 @@
         letter-spacing: 0.06em;
         max-width: 696px;
     }
-        
-    }
+
+}
 
 
 .main-button {
-        background-color: $accent-color;
-        color: $main-button-color;
-        border: none;
-        cursor: pointer;
-        height: 50px;
-        padding-left: 32px;
-        padding-right: 32px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        min-width: 216px;
-        font-family: inherit;
-        font-weight: 700;
-        font-size: 16px;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.06em;
-        border-radius: 4px;
-        
+    background-color: $accent-color;
+    color: $main-button-color;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 216px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+
 }
-
-// .hero-title {
-//     margin-bottom: 26px;
-//     text-align: center;
-//     color: $hero-title-color;
-//     font-weight: 900;
-//     font-size: 44px;
-//     line-height: 1.45;
-//     letter-spacing: 0.06em;
-//     text-transform: uppercase;
-// }
-
-// .main-button {
-//     background-color: $accent-color;
-//     color: $main-button-color;
-//     border: none;
-//     cursor: pointer;
-//     height: 50px;
-//     padding-left: 32px;
-//     padding-right: 32px;
-//     padding-top: 10px;
-//     padding-bottom: 10px;
-//     min-width: 216px;
-//     font-family: inherit;
-//     font-weight: 700;
-//     font-size: 16px;
-//     align-items: center;
-//     text-align: center;
-//     letter-spacing: 0.06em;
-//     border-radius: 4px;
-// }

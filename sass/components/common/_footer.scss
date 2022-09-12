@@ -2,35 +2,30 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: $hero-footer-background-color;
-    width: 480px;
+    max-width: 1600px;
+    min-width: 480px;
     margin-left: auto;
     margin-right: auto;
 
-    @media screen and (min-width: 480px) {
-                width: 100%;
-        }
 }
-
-
-
-
-    
-@media screen and (min-width: 768px) {
-    .container__footer {
+.container--footer {
+    @media screen and (min-width: 768px){
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 0 165px;
     }  
-}
 
-@media screen and (min-width: 1200px) {
-    .container__footer {
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
         display: flex;
         align-items: baseline;
-        gap: 93px;
+        flex-wrap: nowrap;
+        gap: 0;
     }  
 }
+
+
 
 .logo__footer { 
     display: block;

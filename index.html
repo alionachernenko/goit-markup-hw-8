@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container container__header">
+      <div class="container container--header">
         <a class="logo logo__header" href="./index.html"
           ><span class="logo__web" lang="en">Web</span>Studio</a
         >
@@ -56,7 +56,7 @@
         </ul>
         <button
           type="button"
-          class="menu-button"
+          class="mobile-menu-button"
           aria-label="Перемикач мобільного меню"
           aria-expanded="false"
           aria-controls="menu-container"
@@ -68,12 +68,58 @@
           </svg>
         </button>
 
-        <div class="menu-container" id="menu-container" data-menu>КОнтент</div>
+        <div class="mobile-menu-container" id="menu-container" data-menu>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-nav__items">
+              <li class="mobile-menu-nav__item">
+                <a class="mobile-menu-nav__link current" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="mobile-menu-nav__item">
+                <a class="mobile-menu-nav__link" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mobile-menu-nav__item">
+                <a class="mobile-menu-nav__link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="mobile-menu-contacts">
+            <li class="mobile-menu-contact__item-tel">
+              <a class="mobile-menu-contact__tel" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu-contact__item-mail">
+              <a
+                class="mobile-menu-contact__mail"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu-social-links">
+            <li class="mobile-menu-social-item">
+              <a class="mobile-menu-social-link" href="">Instagram</a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a class="mobile-menu-social-link" href="">Twitter</a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a class="mobile-menu-social-link" href="">Facebook</a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a class="mobile-menu-social-link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
       <section class="hero">
-        <div class="container__hero">
+        <div class="container--hero">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button main-button" data-modal-open>
             Замовити послугу
@@ -140,10 +186,15 @@
           <ul class="services__items">
             <li class="service">
               <img
-                class="service__image"
-                src="./image/first.jpg"
+                srcset="
+                  ./image/first-370px.jpg   370w,
+                  ./image/first-740px.jpg   740w,
+                  ./image/first-1110px.jpg 1110w
+                "
+                src="./image/first-370px.jpg"
+                class="professional-photo"
                 alt="розробка додатків"
-                width="370"
+                sizes="33vw"
               />
               <div class="service__description-block">
                 <b class="service__description">Десктопні додатки</b>
@@ -151,10 +202,15 @@
             </li>
             <li class="service">
               <img
-                class="service__image"
-                src="./image/third.jpg"
-                alt="тестування мобільних додатків"
-                width="370"
+                srcset="
+                  ./image/third-370px.jpg   370w,
+                  ./image/third-740px.jpg   740w,
+                  ./image/third-1110px.jpg 1110w
+                "
+                src="./image/third-370px.jpg"
+                class="professional-photo"
+                alt="розробка додатків"
+                sizes="33vw"
               />
               <div class="service__description-block">
                 <b class="service__description">Мобільні додатки</b>
@@ -162,10 +218,15 @@
             </li>
             <li class="service">
               <img
-                class="service-image"
-                src="./image/second.jpg"
+                srcset="
+                  ./image/second-370px.jpg   370w,
+                  ./image/second-740px.jpg   740w,
+                  ./image/second-1110px.jpg 1110w
+                "
+                src="./image/second-370px.jpg"
+                class="professional-photo"
                 alt="робота з кольоровою палітрою"
-                width="370"
+                sizes="33vw"
               />
               <div class="service__description-block">
                 <b class="service__description">Дизайнерські рішення</b>
@@ -179,11 +240,36 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team-items">
             <li class="professional">
-              <img
-                src="./image/IgorDemyanenko.jpg"
-                class="professional-photo"
-                alt="Ігор Дем'яненко"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/IgorDemyanenko-Desktop-270px.jpg 270w,
+                    ./image/IgorDemyanenko-Desktop-540px.ipg 540w,
+                    ./image/IgorDemyanenko-Desktop-810px.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/IgorDemyanenko-Tablet-354px.jpg   354w,
+                    ./image/IgorDemyanenko-Tablet-708px.jpg   708w,
+                    ./image/IgorDemyanenko-Tablet-1062px.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/IgorDemyanenko.jpg         450w,
+                    ./image/IgorDemyanenko-900px.jpg   900w,
+                    ./image/IgorDemyanenko-1350px.jpg 1350w
+                  "
+                />
+                <img
+                  src="./image/IgorDemyanenko.jpg"
+                  alt="Ігор Дем'яненко"
+                  class="professional-photo"
+                />
+              </picture>
               <div class="professional__description-block">
                 <h3 class="professional__title">Ігор Дем'яненко</h3>
                 <p class="professional__description" lang="en">
@@ -222,11 +308,37 @@
               </div>
             </li>
             <li class="professional">
-              <img
-                src="./image/OlgaRepina.jpg"
-                alt="Ольга Рєпіна"
-                class="professional-photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/OlgaRepina-Desktop-270px.jpg 270w,
+                    ./image/OlgaRepina-Desktop-540px.ipg 540w,
+                    ./image/OlgaRepina-Desktop-810px.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/OlgaRepina-Tablet-354px.jpg   354w,
+                    ./image/OlgaRepina-Tablet-708px.jpg   708w,
+                    ./image/OlgaRepina-Tablet-1062px.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/OlgaRepina.jpg         450w,
+                    ./image/OlgaRepina-900px.jpg   900w,
+                    ./image/OlgaRepina-1350px.jpg 1350w
+                  "
+                />
+                <img
+                  src="./image/OlgaRepina.jpg"
+                  alt="Ольга Рєпіна"
+                  class="professional-photo"
+                />
+              </picture>
+
               <div class="professional__description-block">
                 <h3 class="professional__title">Ольга Рєпіна</h3>
                 <p class="professional__description" lang="en">
@@ -265,11 +377,36 @@
               </div>
             </li>
             <li class="professional">
-              <img
-                src="./image/NikolaiTarasov.jpg"
-                alt="Микола Тарасов"
-                class="professional-photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/NikolaiTarasov-Desktop-270px.jpg 270w,
+                    ./image/NikolaiTarasov-Desktop-540px.ipg 540w,
+                    ./image/NikolaiTarasov-Desktop-810px.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/NikolaiTarasov-Tablet-354px.jpg   354w,
+                    ./image/NikolaiTarasov-Tablet-708px.jpg   708w,
+                    ./image/NikolaiTarasov-Tablet-1062px.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/NikolaiTarasov.jpg         450w,
+                    ./image/NikolaiTarasov-900px.jpg   900w,
+                    ./image/NikolaiTarasov-1350px.jpg 1350w
+                  "
+                />
+                <img
+                  src="./image/NikolaiTarasov.jpg"
+                  alt="Микола Тарасов"
+                  class="professional-photo"
+                />
+              </picture>
               <div class="professional__description-block">
                 <h3 class="professional__title">Микола Тарасов</h3>
                 <p class="professional__description" lang="en">Marketing</p>
@@ -306,11 +443,36 @@
               </div>
             </li>
             <li class="professional">
-              <img
-                src="./image/MikhailYermakov.jpg"
-                alt="Михайло Єрмаков"
-                class="professional-photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/MikhailYermakov-Desktop-270px.jpg 270w,
+                    ./image/MikhailYermakov-Desktop-540px.ipg 540w,
+                    ./image/MikhailYermakov-Desktop-810px.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/MikhailYermakov-Tablet-354px.jpg   354w,
+                    ./image/MikhailYermakov-Tablet-708px.jpg   708w,
+                    ./image/MikhailYermakov-Tablet-1062px.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/MikhailYermakov.jpg         450w,
+                    ./image/MikhailYermakov-900px.jpg   900w,
+                    ./image/MikhailYermakov-1350px.jpg 1350w
+                  "
+                />
+                <img
+                  src="./image/MikhailYermakov.jpg"
+                  alt="Михайло Єрмаков"
+                  class="professional-photo"
+                />
+              </picture>
               <div class="professional__description-block">
                 <h3 class="professional__title">Михайло Єрмаков</h3>
                 <p class="professional__description" lang="en">UI Designer</p>
@@ -400,8 +562,8 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container container__footer">
-        <div>
+      <div class="container container--footer">
+        <div class="address-logo-box">
           <a class="logo logo__footer" href="./index.html"
             ><span class="logo__web" lang="en">Web</span>Studio</a
           >
