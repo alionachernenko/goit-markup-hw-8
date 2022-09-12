@@ -35,30 +35,14 @@
     color: $footer-logo-color;
     text-decoration: none; 
     text-align: center;
-}
 
-@media screen and (min-width: 1200px) {
-    .logo__footer {
+    @media screen and (min-width: 1200px) {
         text-align: left;
     }
 }
 
+
+
 .logo__web {
     color: $accent-color;
 }
-
-
-
-
-// .logo__footer {
-//     margin-bottom: 20px;
-//     font-family: 'Raleway', sans-serif;
-//     font-size: 26px;
-//     color: $footer-logo-color;
-//     text-decoration: none;
-// }
-// .container__footer {
-//     display: flex;
-//     align-items: baseline;
-//     gap: 93px;
-// }

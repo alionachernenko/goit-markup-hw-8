@@ -19,8 +19,9 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+
     .contacts :not(:last-child) {
+        @media screen and (min-width: 1200px) {
         margin-right: 50px;
     }
     
@@ -44,8 +45,9 @@
 
 
 
-@media screen and (min-width: 768px) {
+
     .contacts__link {
+        @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
         font-weight: 500;
@@ -59,8 +61,9 @@
     
 }
 
-@media screen and (min-width: 1200px) {
+
     .contacts__link {
+        @media screen and (min-width: 1200px) {
         padding-top: 32px;
         padding-bottom: 32px;
         font-size: 14px;
