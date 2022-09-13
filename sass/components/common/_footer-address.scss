@@ -16,17 +16,7 @@
     }
 }
 
-.address-logo-box
- {
-    @media screen and (max-width: 767px) {
-        margin-bottom: 60px;
-        
-    }
-    
-    @media screen and (min-width: 1200px) {
-        margin-right: 93px;
-    }
-}
+
 
 .address-items__location {
     font-size: 14px;
@@ -63,5 +53,20 @@
     .address-items__tel:hover &,
     &:focus {
         color: $accent-color;
+    }
+}
+
+.address-find-container {
+    @media screen and (min-width: 768px){
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 60px;
+        gap: 0 165px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        gap: 0 93px;
+        margin-right: auto;
+        margin-bottom: 0;
     }
 }

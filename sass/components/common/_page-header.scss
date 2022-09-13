@@ -3,8 +3,8 @@
     margin-right: auto;
     display: flex;
     border-bottom: 1px solid #ECECEC;
-    min-width: 480px;
-    max-width: 1600px;
+    // min-width: 480px;
+    // max-width: 1600px;
 }
 
 .logo__header {
@@ -32,7 +32,8 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    // min-width: 480px;
+    width: 100vw;
+
 }
 
 
@@ -56,7 +57,7 @@
     
 }
 
-.mobile-menu-button {
+.mobile-menu-open-button {
     background-color: transparent;
     margin: 0;
     padding: 0;
@@ -65,54 +66,54 @@
     position: absolute;
     top: 10px;
     right: 15px;
-    z-index: 2;
-    
-    & .icon-cross {
-        display: none;
-    }
-    
-    &.is-open .icon-cross {
-        display: block;
-    }
-
-    &.is-open .icon-menu {
-        display: none;
-    }
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
-.mobile-menu-container {
-    padding-top: 48px;
-    padding-left: 40px;
-    padding-bottom: 48px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 1;
-    width: 480px;
-    // height: 100vh;
-    background-color: white;
-    transform: translateY(-100%);
-    transition: transform 250ms ease;
-
-    &.is-open {
-        transform: translateY(0);
-        visibility: visible;
-        pointer-events: initial;
-    }
-
     @media screen and (min-width: 768px) {
         display: none;
         
     }
 }
 
-.mobile-menu-nav {
-    margin-bottom: 302px;
+.mobile-menu-close-button {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 48px;
+    padding-left: 40px;
+    padding-bottom: 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 1;
+    transition: opacity 250ms ease;
+    overflow-y: scroll;
+    z-index: 3;
+    pointer-events: initial;
+    
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+
+.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+    visibility: visible;
 }
 
 .mobile-menu-nav__link {
@@ -147,9 +148,7 @@
     margin-bottom: 32px;
 }
 
-.mobile-menu-contact__item-mail {
-    margin-bottom: 64px;
-}
+
 
 .mobile-menu-contact__mail {
     display: block;
@@ -163,6 +162,7 @@
 
 .mobile-menu-social-links {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .mobile-menu-social-link {

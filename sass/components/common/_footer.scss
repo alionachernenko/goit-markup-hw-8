@@ -2,18 +2,21 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: $hero-footer-background-color;
-    max-width: 1600px;
-    min-width: 480px;
+    // max-width: 1600px;
+    // min-width: 480px;
     margin-left: auto;
     margin-right: auto;
 
 }
 .container--footer {
+
+    width: 100vw;
+
     @media screen and (min-width: 768px){
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0 165px;
+       
     }  
 
     @media screen and (min-width: 1200px) {
@@ -46,3 +49,4 @@
 .logo__web {
     color: $accent-color;
 }
+

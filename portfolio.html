@@ -26,27 +26,33 @@
         <nav class="nav">
           <ul class="list nav__items">
             <li>
-              <a class="nav__link" href="./index.html">Студія</a>
+              <a class="nav__link--current nav__link" href="./index.html"
+                >Студія</a
+              >
             </li>
             <li>
-              <a class="nav__link nav__link--current" href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="nav__link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li><a class="nav__link" href="">Контакти</a></li>
           </ul>
         </nav>
         <ul class="contacts list">
-          <li>
-            <a class="contacts__link" href="mailto:info@devstudio.com">
+          <li class="contacts_item">
+            <a
+              class="contacts__link contacts__link--email"
+              href="mailto:info@devstudio.com"
+            >
               <svg class="contacts__mail-item">
                 <use href="./image/icons.svg#letter"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li>
-            <a class="contacts__link" href="tel:+380961111111">
+          <li class="contacts_item">
+            <a
+              class="contacts__link contacts__link--phone"
+              href="tel:+380961111111"
+            >
               <svg class="contacts__tel-item">
                 <use href="./image/icons.svg#phone"></use>
               </svg>
@@ -56,25 +62,30 @@
         </ul>
         <button
           type="button"
-          class="mobile-menu-button"
+          class="mobile-menu-open-button"
           aria-label="Перемикач мобільного меню"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          js-open-menu
+          data-menu-open
         >
           <svg width="40" height="40">
             <use class="icon-menu" href="./image/icons.svg#open-menu"></use>
-            <use class="icon-cross" href="./image/icons.svg#close-menu"></use>
           </svg>
         </button>
 
-        <div class="mobile-menu-container" id="menu-container" data-menu>
+        <div class="mobile-menu-container is-hidden" data-menu>
+          <button
+            type="button"
+            class="mobile-menu-close-button"
+            aria-label="Перемикач мобільного меню"
+            data-menu-close
+          >
+            <svg width="40" height="40">
+              <use class="icon-cross" href="./image/icons.svg#close-menu"></use>
+            </svg>
+          </button>
           <nav class="mobile-menu-nav">
             <ul class="mobile-menu-nav__items">
               <li class="mobile-menu-nav__item">
-                <a class="mobile-menu-nav__link" href="./index.html"
-                  >Студія</a
-                >
+                <a class="mobile-menu-nav__link" href="./index.html">Студія</a>
               </li>
               <li class="mobile-menu-nav__item">
                 <a class="mobile-menu-nav__link current" href="./portfolio.html"
@@ -86,6 +97,7 @@
               </li>
             </ul>
           </nav>
+
           <ul class="mobile-menu-contacts">
             <li class="mobile-menu-contact__item-tel">
               <a class="mobile-menu-contact__tel" href="tel:+380961111111"
@@ -115,7 +127,6 @@
             </li>
           </ul>
         </div>
-      </div>
       </div>
     </header>
     <main>
@@ -148,36 +159,37 @@
             <li class="service-card">
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
-                <picture>
-                <source
-                  srcset="
-                    ./image/laptop-desktop-370.jpg 370w,
-                    ./image/laptop-desktop-740.ipg 740w,
-                    ./image/laptop-desktop-1110.jpg 1110w
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="
-                    ./image/laptop-tablet-354.jpg   354w,
-                    ./image/laptop-tablet-708.jpg   708w,
-                    ./image/laptop-tablet-1062.jpg 1062w
-                  "
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./image/laptop.jpg         450w,
-                    ./image/laptop-900.jpg   900w,
-                    ./image/laptop-1350.jpg 1350w
-                  "
-                />
-                <img
-                  src="./image/laptop.jpg"
-                  alt="Відкритий сайт на ноутбуці"
-                  class="service-card_image"
-                />
-                </picture>
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/laptop-desktop-370.jpg   370w,
+                        ./image/laptop-desktop-740.ipg   740w,
+                        ./image/laptop-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/laptop-tablet-354.jpg   354w,
+                        ./image/laptop-tablet-708.jpg   708w,
+                        ./image/laptop-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/laptop.jpg       450w,
+                        ./image/laptop-900.jpg   900w,
+                        ./image/laptop-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/laptop.jpg"
+                      alt="Відкритий сайт на ноутбуці"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -196,36 +208,37 @@
             <li class="service-card">
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
-                <picture>
-                  <source
-                    srcset="
-                      ./image/sportsmen-desktop-370.jpg 370w,
-                      ./image/sportsmen-desktop-740.ipg 740w,
-                      ./image/sportsmen-desktop-1110.jpg 1110w
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/sportsmen-tablet-354.jpg   354w,
-                      ./image/sportsmen-tablet-708.jpg   708w,
-                      ./image/sportsmen-tablet-1062.jpg 1062w
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/sportsmen.jpg         450w,
-                      ./image/sportsmen-900.jpg   900w,
-                      ./image/sportsmen-1350.jpg 1350w
-                    "
-                  />
-                  <img
-                    src="./image/sportsmen.jpg"
-                    alt="Волейболісти"
-                    class="service-card_image"
-                  />
-                </picture>
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/sportsmen-desktop-370.jpg   370w,
+                        ./image/sportsmen-desktop-740.ipg   740w,
+                        ./image/sportsmen-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/sportsmen-tablet-354.jpg   354w,
+                        ./image/sportsmen-tablet-708.jpg   708w,
+                        ./image/sportsmen-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/sportsmen.jpg       450w,
+                        ./image/sportsmen-900.jpg   900w,
+                        ./image/sportsmen-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/sportsmen.jpg"
+                      alt="Волейболісти"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -247,35 +260,36 @@
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
                   <picture>
-                  <source
-                    srcset="
-                      ./image/seafood-desktop-370.jpg 370w,
-                      ./image/seafood-desktop-740.ipg 740w,
-                      ./image/seafood-desktop-1110.jpg 1110w
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/seafood-tablet-354.jpg   354w,
-                      ./image/seafood-tablet-708.jpg   708w,
-                      ./image/seafood-tablet-1062.jpg 1062w
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/seafood.jpg         450w,
-                      ./image/seafood-900.jpg   900w,
-                      ./image/seafood-1350.jpg 1350w
-                    "
-                  />
-                  <img
-                    src="./image/seafood.jpg"
-                    alt="Емблема ресторану"
-                    class="service-card_image"
-                  />
-                </picture>
+                    <source
+                      srcset="
+                        ./image/seafood-desktop-370.jpg   370w,
+                        ./image/seafood-desktop-740.ipg   740w,
+                        ./image/seafood-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/seafood-tablet-354.jpg   354w,
+                        ./image/seafood-tablet-708.jpg   708w,
+                        ./image/seafood-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/seafood.jpg       450w,
+                        ./image/seafood-900.jpg   900w,
+                        ./image/seafood-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/seafood.jpg"
+                      alt="Емблема ресторану"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -295,35 +309,36 @@
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
                   <picture>
-                  <source
-                    srcset="
-                      ./image/headphones-desktop-370.jpg 370w,
-                      ./image/headphones-desktop-740.ipg 740w,
-                      ./image/headphones-desktop-1110.jpg 1110w
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/headphones-tablet-354.jpg   354w,
-                      ./image/headphones-tablet-708.jpg   708w,
-                      ./image/headphones-tablet-1062.jpg 1062w
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/headphones.jpg         450w,
-                      ./image/headphones-900.jpg   900w,
-                      ./image/headphones-1350.jpg 1350w
-                    "
-                  />
-                  <img
-                    src="./image/headphones.jpg"
-                    alt="Чорні навушники"
-                    class="service-card_image"
-                  />
-                </picture>
+                    <source
+                      srcset="
+                        ./image/headphones-desktop-370.jpg   370w,
+                        ./image/headphones-desktop-740.ipg   740w,
+                        ./image/headphones-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/headphones-tablet-354.jpg   354w,
+                        ./image/headphones-tablet-708.jpg   708w,
+                        ./image/headphones-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/headphones.jpg       450w,
+                        ./image/headphones-900.jpg   900w,
+                        ./image/headphones-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/headphones.jpg"
+                      alt="Чорні навушники"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -343,35 +358,36 @@
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
                   <picture>
-                  <source
-                    srcset="
-                      ./image/boxes-desktop-370.jpg 370w,
-                      ./image/boxes-desktop-740.ipg 740w,
-                      ./image/boxes-desktop-1110.jpg 1110w
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/boxes-tablet-354.jpg   354w,
-                      ./image/boxes-tablet-708.jpg   708w,
-                      ./image/boxes-tablet-1062.jpg 1062w
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/boxes.jpg         450w,
-                      ./image/boxes-900.jpg   900w,
-                      ./image/boxes-1350.jpg 1350w
-                    "
-                  />
-                  <img
-                    src="./image/boxes.jpg"
-                    alt="Рожева та кремова коробка"
-                    class="service-card_image"
-                  />
-                </picture>
+                    <source
+                      srcset="
+                        ./image/boxes-desktop-370.jpg   370w,
+                        ./image/boxes-desktop-740.ipg   740w,
+                        ./image/boxes-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/boxes-tablet-354.jpg   354w,
+                        ./image/boxes-tablet-708.jpg   708w,
+                        ./image/boxes-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/boxes.jpg       450w,
+                        ./image/boxes-900.jpg   900w,
+                        ./image/boxes-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/boxes.jpg"
+                      alt="Рожева та кремова коробка"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -391,35 +407,36 @@
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
                   <picture>
-                  <source
-                    srcset="
-                      ./image/monitor-desktop-370.jpg 370w,
-                      ./image/monitor-desktop-740.ipg 740w,
-                      ./image/monitor-desktop-1110.jpg 1110w
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/monitor-tablet-354.jpg   354w,
-                      ./image/monitor-tablet-708.jpg   708w,
-                      ./image/monitor-tablet-1062.jpg 1062w
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/monitor.jpg         450w,
-                      ./image/monitor-900.jpg   900w,
-                      ./image/monitor-1350.jpg 1350w
-                    "
-                  />
-                  <img
-                    src="./image/monitor.jpg"
-                    alt="Монітор комп'ютера"
-                    class="service-card_image"
-                  />
-                </picture>
+                    <source
+                      srcset="
+                        ./image/monitor-desktop-370.jpg   370w,
+                        ./image/monitor-desktop-740.ipg   740w,
+                        ./image/monitor-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/monitor-tablet-354.jpg   354w,
+                        ./image/monitor-tablet-708.jpg   708w,
+                        ./image/monitor-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/monitor.jpg       450w,
+                        ./image/monitor-900.jpg   900w,
+                        ./image/monitor-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/monitor.jpg"
+                      alt="Монітор комп'ютера"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -441,35 +458,36 @@
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
                   <picture>
-                  <source
-                    srcset="
-                      ./image/magazine-desktop-370.jpg 370w,
-                      ./image/magazine-desktop-740.ipg 740w,
-                      ./image/magazine-desktop-1110.jpg 1110w
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/magazine-tablet-354.jpg   354w,
-                      ./image/magazine-tablet-708.jpg   708w,
-                      ./image/magazine-tablet-1062.jpg 1062w
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/magazine.jpg         450w,
-                      ./image/magazine-900.jpg   900w,
-                      ./image/magazine-1350.jpg 1350w
-                    "
-                  />
-                  <img
-                    src="./image/magazine.jpg"
-                    alt="Розгорнутий журнал"
-                    class="service-card_image"
-                  />
-                </picture>
+                    <source
+                      srcset="
+                        ./image/magazine-desktop-370.jpg   370w,
+                        ./image/magazine-desktop-740.ipg   740w,
+                        ./image/magazine-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/magazine-tablet-354.jpg   354w,
+                        ./image/magazine-tablet-708.jpg   708w,
+                        ./image/magazine-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/magazine.jpg       450w,
+                        ./image/magazine-900.jpg   900w,
+                        ./image/magazine-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/magazine.jpg"
+                      alt="Розгорнутий журнал"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -489,35 +507,36 @@
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
                   <picture>
-                  <source
-                    srcset="
-                      ./image/label-desktop-370.jpg 370w,
-                      ./image/label-desktop-740.ipg 740w,
-                      ./image/label-desktop-1110.jpg 1110w
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/lable-tablet-354.jpg   354w,
-                      ./image/lable-tablet-708.jpg   708w,
-                      ./image/lable-tablet-1062.jpg 1062w
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/label.jpg         450w,
-                      ./image/label-900.jpg   900w,
-                      ./image/label-1350.jpg 1350w
-                    "
-                  />
-                  <img
-                    src="./image/label.jpg"
-                    alt="Біла етикетка"
-                    class="service-card_image"
-                  />
-                </picture>
+                    <source
+                      srcset="
+                        ./image/label-desktop-370.jpg   370w,
+                        ./image/label-desktop-740.ipg   740w,
+                        ./image/label-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/lable-tablet-354.jpg   354w,
+                        ./image/lable-tablet-708.jpg   708w,
+                        ./image/lable-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/label.jpg       450w,
+                        ./image/label-900.jpg   900w,
+                        ./image/label-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/label.jpg"
+                      alt="Біла етикетка"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -537,35 +556,36 @@
               <a class="service-card__link" href="#">
                 <div class="service-card__container">
                   <picture>
-                  <source
-                    srcset="
-                      ./image/hands_laptop-desktop-370.jpg 370w,
-                      ./image/hands_laptop-desktop-740.ipg 740w,
-                      ./image/hands_laptop-desktop-1110.jpg 1110w
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/hands_laptop-tablet-354.jpg   354w,
-                      ./image/hands_laptop-tablet-708.jpg   708w,
-                      ./image/hands_laptop-tablet-1062.jpg 1062w
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./image/hands_laptop.jpg         450w,
-                      ./image/hands_laptop-900.jpg   900w,
-                      ./image/hands_laptop-1350.jpg 1350w
-                    "
-                  />
-                  <img
-                    src="./image/hands_laptop.jpg"
-                    alt="Біла етикетка"
-                    class="service-card_image"
-                  />
-                </picture>
+                    <source
+                      srcset="
+                        ./image/hands_laptop-desktop-370.jpg   370w,
+                        ./image/hands_laptop-desktop-740.ipg   740w,
+                        ./image/hands_laptop-desktop-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/hands_laptop-tablet-354.jpg   354w,
+                        ./image/hands_laptop-tablet-708.jpg   708w,
+                        ./image/hands_laptop-tablet-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./image/hands_laptop.jpg       450w,
+                        ./image/hands_laptop-900.jpg   900w,
+                        ./image/hands_laptop-1350.jpg 1350w
+                      "
+                    />
+                    <img
+                      src="./image/hands_laptop.jpg"
+                      alt="Біла етикетка"
+                      class="service-card_image"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="service-card__description-box">
                     <p class="service-card__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем

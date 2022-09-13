@@ -2,21 +2,38 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    width: 100vw;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-left: 204px;
+        padding-right: 204px;
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
+
+        
 }
 
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-width: 480px;
+    // min-width: 480px;
     max-width: 1600px;
     margin: 0 auto;
-    height: 400px;
+    // height: 400px;
     background-image:
             linear-gradient(to right, $hero-gradient, $hero-gradient),
             url(../image/heroimagemobile.jpg);
@@ -34,7 +51,8 @@
             linear-gradient(to right, $hero-gradient, $hero-gradient),
             url(../image/heroimage.jpg);
         background-size: cover;
-        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
     }
     
     @media screen and (min-device-pixel-ratio: 2),
@@ -69,15 +87,12 @@
     text-transform: uppercase;
     color: #FFFFFF;
 
-    @media screen and (min-width: 480px) {
-        max-width: 360px;
-    }
 
     @media screen and (min-width: 1200px) {
         font-size: 44px;
         line-height: 1.45;
         letter-spacing: 0.06em;
-        max-width: 696px;
+        // max-width: 696px;
     }
 
 }
@@ -89,11 +104,11 @@
     border: none;
     cursor: pointer;
     height: 50px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
     padding-top: 10px;
     padding-bottom: 10px;
-    min-width: 216px;
+    width: auto;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -102,4 +117,9 @@
     letter-spacing: 0.06em;
     border-radius: 4px;
 
+    @media screen and (min-width: 1200px) {
+        padding-left: 32px;
+        padding-right: 32px;
+        
+    }
 }
