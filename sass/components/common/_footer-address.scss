@@ -57,6 +57,10 @@
 }
 
 .address-find-container {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+        
+    }
     @media screen and (min-width: 768px){
         display: flex;
         align-items: baseline;
@@ -68,5 +72,11 @@
         gap: 0 93px;
         margin-right: auto;
         margin-bottom: 0;
+    }
+}
+
+.address-logo-box {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
     }
 }
