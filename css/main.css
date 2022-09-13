@@ -357,10 +357,11 @@ summary {
   height: 100vh;
   background-color: white;
   opacity: 1;
-  transition: opacity 250ms ease;
+  transition: transform 250ms ease;
   overflow-y: scroll;
   z-index: 3;
   pointer-events: initial;
+  transform: translateY(0);
 }
 @media screen and (min-width: 768px) {
   .mobile-menu-container {
@@ -372,6 +373,7 @@ summary {
   pointer-events: none;
   opacity: 0;
   visibility: visible;
+  transform: translateY(-100%);
 }
 
 .mobile-menu-nav__link {
