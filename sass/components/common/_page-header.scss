@@ -100,11 +100,12 @@
     height: 100vh;
     background-color: white;
     opacity: 1;
+    transform: translateY(0);
     transition: transform 250ms ease;
     overflow-y: scroll;
     z-index: 3;
     pointer-events: initial;
-    transform: translateY(0);
+    
     
 
     @media screen and (min-width: 768px) {
