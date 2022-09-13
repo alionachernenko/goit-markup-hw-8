@@ -30,6 +30,7 @@
 .service {
     position: relative;
     overflow: hidden;
+    flex-basis: calc((100% - 1 * 30px) / 2)
 }
 
 .service__description-block {

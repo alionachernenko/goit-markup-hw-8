@@ -322,6 +322,7 @@ summary {
   position: absolute;
   top: 10px;
   right: 15px;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .mobile-menu-open-button {
@@ -338,6 +339,7 @@ summary {
   position: absolute;
   top: 10px;
   right: 15px;
+  cursor: pointer;
 }
 
 .mobile-menu-container {
@@ -857,6 +859,7 @@ img {
 .service {
   position: relative;
   overflow: hidden;
+  flex-basis: calc((100% - 30px) / 2);
 }
 
 .service__description-block {
@@ -1734,7 +1737,9 @@ form {
 .service-card__link {
   width: 100%;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1780,7 +1785,7 @@ form {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .service-card:first-child .service-card__meta {
-    height: 147px;
+    flex-grow: 1;
   }
 }
 
