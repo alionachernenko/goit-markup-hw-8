@@ -748,6 +748,11 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding: 94px 0;
+  }
+}
 
 .benefits__title {
   text-align: center;
@@ -1117,13 +1122,18 @@ img {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 450px;
+  width: 90%;
   min-height: 609px;
   background-color: #FFFFFF;
   opacity: 1;
   transition: transform 250ms ease, opacity 250ms ease;
   border-radius: 4px;
   padding: 40px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
