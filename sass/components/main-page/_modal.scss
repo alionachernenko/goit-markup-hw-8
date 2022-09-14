@@ -17,6 +17,12 @@
 
 }
 
+.backdrop.is-hidden {
+    pointer-events: none;
+        opacity: 0;
+        visibility: visible;
+}
+
 .modal {
     margin-left: auto;
     margin-right: auto;
@@ -60,11 +66,7 @@
     cursor: pointer;
 }
 
-.is-hidden {
-    pointer-events: none;
-    opacity: 0;
-    visibility: visible;
-}
+
 
 .backdrop.is-hidden .modal {
     transform: translateY(100%);

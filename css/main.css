@@ -356,8 +356,8 @@ summary {
   width: 100vw;
   height: 100vh;
   background-color: white;
-  opacity: 1;
-  transition: opacity 250ms ease;
+  transform: translateY(0);
+  transition: transform 250ms ease;
   overflow-y: scroll;
   z-index: 3;
   pointer-events: initial;
@@ -368,10 +368,10 @@ summary {
   }
 }
 
-.is-hidden {
+.mobile-menu-container.is-hidden {
   pointer-events: none;
   visibility: visible;
-  opacity: 0;
+  transform: translateY(-100%);
 }
 
 .mobile-menu-nav__link {
@@ -1107,6 +1107,12 @@ img {
   overflow-y: scroll;
 }
 
+.backdrop.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: visible;
+}
+
 .modal {
   margin-left: auto;
   margin-right: auto;
@@ -1145,12 +1151,6 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   cursor: pointer;
-}
-
-.is-hidden {
-  pointer-events: none;
-  opacity: 0;
-  visibility: visible;
 }
 
 .backdrop.is-hidden .modal {

@@ -99,23 +99,24 @@
     width: 100vw;
     height: 100vh;
     background-color: white;
-    opacity: 1;
-    // transform: translateY(0);
-    transition: opacity 250ms ease;
+    // opacity: 1;
+    transform: translateY(0);
+    transition: transform 250ms ease;
     overflow-y: scroll;
     z-index: 3;
     pointer-events: initial;
+
     @media screen and (min-width: 768px) {
         display: none;
     }
 }
 
 
-.is-hidden {
+.mobile-menu-container.is-hidden {
     pointer-events: none;
     visibility: visible;
-    opacity: 0;
-    // transform: translateY(-100%);
+    // opacity: 0;
+    transform: translateY(-100%);
 }
 
 .mobile-menu-nav__link {
