@@ -357,8 +357,7 @@ summary {
   height: 100vh;
   background-color: white;
   opacity: 1;
-  transform: translateY(0);
-  transition: transform 250ms ease;
+  transition: opacity 250ms ease;
   overflow-y: scroll;
   z-index: 3;
   pointer-events: initial;
@@ -371,9 +370,8 @@ summary {
 
 .is-hidden {
   pointer-events: none;
-  opacity: 0;
   visibility: visible;
-  transform: translateY(-100%);
+  opacity: 0;
 }
 
 .mobile-menu-nav__link {
@@ -1121,7 +1119,6 @@ img {
   border-radius: 4px;
   padding: 40px;
 }
-
 @media screen and (min-width: 1200px) {
   .modal {
     position: absolute;
@@ -1130,14 +1127,11 @@ img {
     transform: translate(-50%, -50%);
     transition: transform 250ms ease, opacity 250ms ease;
     border-radius: 4px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal {
     width: 528px;
     min-height: 581px;
   }
 }
+
 .close-button__modal {
   display: flex;
   align-items: center;
@@ -1160,16 +1154,15 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  opacity: 0;
   transform: translateY(100%);
 }
-
 @media screen and (min-width: 1200px) {
   .backdrop.is-hidden .modal {
     opacity: 0;
     transform: translate(-50%, 100%);
   }
 }
+
 .close-button__icon {
   fill: #000000;
   width: 11px;
