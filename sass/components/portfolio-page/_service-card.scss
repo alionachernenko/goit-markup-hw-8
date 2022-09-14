@@ -1,5 +1,5 @@
 .service-card {
-
+    
     width: 100%;
     transition: box-shadow $animation-duration $animation-timing-function;
 
@@ -28,6 +28,7 @@
     flex-direction: column;
     height: 100%;
     transition: box-shadow $animation-duration $animation-timing-function;
+    
 }
 
 
@@ -36,6 +37,7 @@
 .service-card__container {
     position: relative;
     overflow: hidden;
+
 }
 
 .service-card__description-box {
@@ -49,6 +51,7 @@
     position: absolute;
     transform: translateY(100%);
     transition: transform $animation-duration $animation-timing-function;
+    overflow: hidden;
 
     .service-card__link:focus &,
     .service-card:hover & {
