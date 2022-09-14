@@ -1779,6 +1779,12 @@ form {
   letter-spacing: 0.03em;
   color: #FFFFFF;
 }
+@media screen and (max-width: 479px) {
+  .service-card__description {
+    font-size: calc(7px + 2.2964509395vw);
+    line-height: 1.5;
+  }
+}
 
 .service-card__meta {
   padding-top: 20px;
